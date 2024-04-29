@@ -1,0 +1,67 @@
+
+<div class="container">
+    <div class="row" *ngIf="cartitems.length==0">
+        <h3>cart is empty<a href="/customer/carlist">Book Now</a></h3>
+    </div>
+    <div class="row">
+        <!-- <ng-container *ngFor="let p of cartitems"> -->
+        <div class="col-md-4"  *ngFor="let p of cartitems">
+            <div class="card">
+            <div class="card-header">
+                <img [src]="p.carImage" height="200" width="200" class="card-img-top" alt=" ">
+            </div>
+                <div class="card-body">
+                    <h3 class="card-title">carPerHour:{{p.carPerHour}}</h3>
+                    <p class="card-text">carPerDay: {{p.carPerDay}}</p>
+                    <p class="card-text">price:{{p.carPrice| currency:'INR'}}</p>
+                </div>
+                <div>
+                   <button class="btn btn-danger" (click)="delete(p)">
+                    <li class="fa fa-trash">  
+                    </li>
+                   </button> 
+                </div>
+                <div class="row" *ngIf="cartitems.length!=0">
+                    <div class="col-md-4">
+                        <h3>total:{{totalprice}}</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="buynow">
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#mymodal">book</button>
+                        </div>
+                    </div>
+                </div>
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Book Now</h4>
+                <a data-bs-dismiss="modal" class="btn-close"></a>
+            </div>
+            <div class="modal-body">
+                <h3>are you sure you want to book a car?</h3>
+                <h4>Total:{{totalprice}}</h4>
+                <h3>quantity:{{cartlength}}</h3>
+                <h3>payment method</h3>
+                
+                <input type="radio" name="payment" id="" checked>cash on delivery
+                <input type="radio" name="payment" id="">online payment
+                <h3>Address</h3>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" (click)="onSubmit()">Book Now</button>
+                <button class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+            <!-- </div>
+        </div>
+    </ng-container>
+    </div>
+</div> -->

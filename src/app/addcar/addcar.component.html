@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1>ADD CARS</h1>
+            <form action="" (ngSubmit)="addCars()">
+            <div class="form-group">
+                <label for="" class="form-label">carId</label>
+                 <input type="text" class="form-control" name="id" [(ngModel)]="carId">
+        </div>
+        <div class="form-group">
+            <label for="" class="form-label">carName</label>
+             <input type="text" class="form-control" name="carName" [(ngModel)]="carName">
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">carPerHour</label>
+        <input type="text" class="form-control" name="carPerHour" [(ngModel)]="carPerHour">
+    </div>
+            <div class="form-group">
+                <label for="" class="form-label">carPerDay</label>
+                <input type="text" class="form-control" name="carPerDay" [(ngModel)]="carPerDay">
+            </div>
+            <div class="form-group"><label for="" class="form-label">carPrice</label>
+                <input type="text" class="form-control" name="carPrice" [(ngModel)]="carPrice">
+            </div>
+            
+            <div class="form-group"><label for="" class="form-label">carImage</label>
+                <input type="text" class="form-control" name="carImage" [(ngModel)]="carImage">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="addCars()">submit</button> &nbsp;
+                <button class="btn btn-danger">cancel</button>
+            </div>
+            </form>
+            </div>
+            </div>
+            </div>
+
+    

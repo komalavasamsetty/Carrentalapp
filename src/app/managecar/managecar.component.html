@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="row">
+        <ng-container >
+            <div class="col-md-4" *ngFor ="let p of cars">
+                <div class="card">
+                    <div class="card-header">
+                        <img [src]="p.carImage" class="card-image-top" height="270" width="500">
+                    </div>
+                    <div class="card-body" *ngIf="!p.carEdit">
+                        <h6 class="card-title">Hours{{ p.carPerHour }}</h6>
+                        <p class="card-text">days:{{ p.carPerDay}}</p>
+                        <p class="card-text">Price:{{ p.carPrice }}</p>
+                        </div>
+
+                        <div class="card-body" *ngIf="p.carEdit">
+                           <input type="text" name="p"[(ngModel)]="p.carPerHour">
+                           <input type="text" name="p"[(ngModel)]="p.carPerDay">
+                           <input type="text" name="p"[(ngModel)]="p.carPrice">
+                           </div>
+                    <div>
+                         <button class="btn btn-warning" *ngIf="!p.carEdit" (click)="toUpdate(p)">Edit</button>
+                         <button class="btn btn-primary" *ngIf="p.carEdit" (click)="toSave(p)">Save</button>
+                         <button class="btn btn-danger"  (click)="delete(p)">delete</button>
+                      </div>
+    
+                </div>
+           
+            </div>
+        </ng-container>
+    </div>
+</div>

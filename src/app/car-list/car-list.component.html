@@ -1,0 +1,76 @@
+
+<!-- <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <ng-container *ngFor="let p of car">
+            <div class="card d-inline-block" style="width: 18rem; margin: 10px;" >
+                <div class="card-header">
+                    <img [src]="p.carImage"  height="200" width="100" alt="" class="card-img-top">
+                </div>
+                <div class="card-boby">
+                 
+                    <h4 class="card-title">
+                        {{ p.carName }}
+                    </h4>
+                    <p class="card-text">perhour: {{ p.carPerHour }}</p>
+                     <p class="card-text">perday: {{ p.carPerDay }}</p>
+                    <p class="card-text">price: {{ p.carPrice }}</p> <!-- Check if this is correct -->
+
+                    <!-- <p class="card-text">type: {{ p.carType }}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" type="button" (click)="bookForm()">Book Now</button>
+                    <button class="btn btn-danger">Cancel</button>
+               
+                </div>
+            </div>
+        </ng-container>
+    </div> -->
+<!-- </div> --> 
+<!-- <p>car-list works!</p>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <ng-container *ngFor="let p of car">
+      <div class="card d-inline-block" style="width: 18rem; margin: 10px;">
+        <div class="card-header">
+          <img [src]="p.carImage"  height="200" width="100" alt="" class="card-img-top">
+        </div>
+        <div class="card-boby">
+          <h4 class="card-title">
+            {{ p.carName }}
+          </h4>
+          <p class="card-text">perhour: {{ p.carPerHour }}</p>
+          <p class="card-text">perday: {{ p.carPerDay }}</p>
+          <p class="card-text">price: {{ p.carPrice }}</p>  Adjusted property name here -->
+          <!-- <p class="card-text">type: {{ p.carType }}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" type="button" (click)="bookForm()">Book Now</button>
+          <button class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div> --> 
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let p of cars">
+        <div class="col-md-5" >
+            <div class="card-header">
+                <img [src]="p.carImage" height="200" width="100" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Name:{{p.carName}}</h3>
+                    <p class="card-text">CarPerHour:{{p.carPerHour}}</p>
+                    <p class="card-text">CarPerDay:{{p.carPerDay}}</p>
+                    <p class="card-text">Price:{{p.carPrice}}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" (click)="addtoCart(p)">Add To Cart</button>
+                    <button class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    </div>
+</div>
+
